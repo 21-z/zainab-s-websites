@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+         form{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    background-color: white;
+    }
+    body{
+        background-image: url('coffee2.jpg');
+        background-blend-mode: overlay;
+        background-color: rgba(0,0,0,0.5);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+            
+            
+            
+        </style>
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"crossorigin="anonymous"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+  <link rel="stylesheet" href="carousel.css">
+  <!--  <script type="text/javascript" src="main.js"></script>
+ <!--   <link rel="stylesheet" href="styles.css">
+      <!--   <script src="jquery-1.11.3.min.js"></script>-->  
+     <!--       <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+     <!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->  
+   
+  <!--          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+         <!--      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <!-- <script src="jquery-3.5.1.min.js"></script>-->  
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+ 
+    
+    </head>
+    <body>
+        <form autocomplete="off" id="form" class="text-center border border-light p-5 ">
+            <p class="h4 mb-4">login</p>
+            <input type="email" required id="email" class="form-control mb-4" placeholder="email">
+            <input type="password" required id="password" class="form-control mb-4" placeholder="password">
+            <button type="submit" class="btn btn-warning btn-block" >submit</button>   
+        </form>
+        <script>
+        var x  = document.getElementById("email");
+        var p  = document.getElementById("password");
+        
+    document.getElementById("form").addEventListener("submit",(ee)=>{
+       ee.preventDefault();
+       console.log(x.value);
+       console.log(p.value);
+       if (x.value=="admin@gmail.com" && p.value=="qwerty"){
+           swal.fire({
+               title:'welcome',
+               html:'access granted',
+               type: 'success'
+           });
+           setTimeout(() => {
+               loadPage();
+               
+           },3000);
+       }else{
+           swal.fire({
+               title:'error',
+                 html:'access denied',
+               type: 'error'
+           });
+       }
+       function loadPage(){
+        //   window.loction.href="admin.html";
+            // var x = admin.html.href;
+  location.href="admin.html";
+       }
+    });
+    
+    
+    
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+<script src=" https://cdn.jsdelivr.net/npm/sweetalert2@10.13.0/dist/sweetalert2.all.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ddb00eae50.js" crossorigin="anonymous"></script>
+    </body>
+</html>
